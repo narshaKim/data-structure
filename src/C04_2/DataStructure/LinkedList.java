@@ -15,16 +15,16 @@ public class LinkedList extends AbstractLinkedList {
     }
 
     @Override
-    public void insert(int data) {
+    public boolean insert(int data) {
         if(sortRuleType==null) {
-            firstInsert(data);
+            return firstInsert(data);
         }
         else {
-            sortInsert(data);
+            return sortInsert(data);
         }
     }
 
-    private void firstInsert(int data) {
+    private boolean firstInsert(int data) {
         Node newNode = new Node();
         newNode.data=data;
 
@@ -32,41 +32,44 @@ public class LinkedList extends AbstractLinkedList {
         head.next=newNode;
 
         numOfData++;
+        return true;
     }
 
-    private void sortInsert(int data) {
-
+    private boolean sortInsert(int data){
+        return true;
     }
 
     @Override
-    public int first() throws Exception {
+    public boolean first(){
         if(head.next==null)
-            throw new Exception("there is No first Data");
+            return false;
         before=head;
         cur=head.next;
-        int result = cur.data;
-        return result;
+        return true;
     }
 
     @Override
-    public int next() throws Exception {
+    public boolean next(){
         if(head.next==null)
-            throw new Exception("there is No next Data");
+            return false;
         before = cur;
         cur = cur.next;
-        int result = cur.data;
-        return result;
+        return true;
     }
 
     @Override
-    public int remove() throws Exception {
+    public boolean remove(){
         if(head.next==null)
-            throw new Exception("there is No removable Data");
-        int result = cur.data;
+            return false;
         before.next=cur.next;
         cur=before;
         numOfData--;
-        return result;
+        return true;
+    }
+
+    @Override
+    public int get() {
+        return cur.data;
     }
 
     @Override

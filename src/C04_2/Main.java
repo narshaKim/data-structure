@@ -16,56 +16,30 @@ public class Main {
 
         System.out.println("현재 데이터의 수 : " + linkedList.count());
 
-        int data;
-        try {
-            data = linkedList.first();
-            System.out.println(data);
-            boolean flag = true;
-            while (flag) {
-                try {
-                    data = linkedList.next();
-                    System.out.println(data);
-                } catch (Exception e) {
-                    flag=false;
-                }
+        if(linkedList.first()) {
+            System.out.println(linkedList.get());
+            while (linkedList.next()) {
+                System.out.println(linkedList.get());
             }
-        } catch (Exception e) {
         }
 
-        try {
-            data = linkedList.first();
-            if(data==22)
+        if(linkedList.first()) {
+            if(linkedList.get()==22)
                 linkedList.remove();
-            boolean flag = true;
-            while (flag) {
-                try {
-                    data = linkedList.next();
-                    if(data==22)
-                        linkedList.remove();
-                } catch (Exception e) {
-                    flag=false;
-                }
+            while (linkedList.next()) {
+                if(linkedList.get()==22)
+                    linkedList.remove();
             }
-        } catch (Exception e) {
         }
 
         System.out.println("현재 데이터의 수 : " + linkedList.count());
 
-        try {
-            data = linkedList.first();
-            System.out.println(data);
-            boolean flag = true;
-            while (flag) {
-                try {
-                    data = linkedList.next();
-                    System.out.println(data);
-                } catch (Exception e) {
-                    flag=false;
-                }
+        if(linkedList.first()) {
+            System.out.println(linkedList.get());
+            while (linkedList.next()) {
+                System.out.println(linkedList.get());
             }
-        } catch (Exception e) {
         }
-        
     }
 
 }

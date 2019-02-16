@@ -50,7 +50,7 @@ public class LinkedList extends AbstractLinkedList {
 
     @Override
     public boolean next(){
-        if(head.next==null)
+        if(cur.next==null)
             return false;
         before = cur;
         cur = cur.next;
@@ -59,8 +59,6 @@ public class LinkedList extends AbstractLinkedList {
 
     @Override
     public boolean remove(){
-        if(head.next==null)
-            return false;
         before.next=cur.next;
         cur=before;
         numOfData--;

@@ -9,38 +9,40 @@ public class ArrayList extends AbstractArrayList {
     }
 
     @Override
-    public void insert(int data) throws Exception {
+    public boolean insert(int data){
         if(numOfData>=listLength) {
-            throw new Exception("데이터를 더 추가할 수 없습니다.");
+            return false;
         }
         array[numOfData]=data;
         numOfData++;
+        return true;
     }
 
     @Override
-    public int first() throws Exception {
+    public boolean first(){
         if(numOfData==0)
-            throw new Exception("데이터가 없습니다.");
+            return false;
         curPosition=0;
-        int result = array[curPosition];
-        return result;
+        return true;
     }
 
     @Override
-    public int next() throws Exception {
+    public boolean next(){
         if(numOfData<=curPosition+1)
-            throw new Exception("현재 마지막 데이터입니다.");
+            return false;
         curPosition++;
-        int result = array[curPosition];
-        return result;
+        return true;
     }
 
     @Override
-    public int remove() throws Exception {
-        if(numOfData==0)
-            throw new Exception("삭제할 데이터가 없습니다.");
+    public int get() {
+        return array[curPosition];
+    }
 
-        int result = array[curPosition];
+    @Override
+    public boolean remove(){
+        if(numOfData==0)
+            return false;
 
         for(int idx=curPosition; idx<numOfData-1; idx++)
             array[idx]=array[idx+1];
@@ -48,7 +50,7 @@ public class ArrayList extends AbstractArrayList {
         numOfData--;
         curPosition--;
 
-        return result;
+        return true;
     }
 
     @Override

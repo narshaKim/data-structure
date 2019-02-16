@@ -15,54 +15,29 @@ public class Main {
 
         System.out.println("현재 데이터의 수 : " + arrayList.count());
 
-        int data;
-        try {
-            data = arrayList.first();
-            System.out.println(data);
-            boolean flag = true;
-            while (flag) {
-                try {
-                    data = arrayList.next();
-                    System.out.println(data);
-                } catch (Exception e) {
-                    flag=false;
-                }
+        if(arrayList.first()) {
+            System.out.println(arrayList.get());
+            while (arrayList.next()) {
+                System.out.println(arrayList.get());
             }
-        } catch (Exception e) {
         }
 
-        try {
-            data = arrayList.first();
-            if(data==22)
+        if(arrayList.first()) {
+            if(arrayList.get()==22)
                 arrayList.remove();
-            boolean flag = true;
-            while (flag) {
-                try {
-                    data = arrayList.next();
-                    if(data==22)
-                        arrayList.remove();
-                } catch (Exception e) {
-                    flag=false;
-                }
+            while (arrayList.next()) {
+                if(arrayList.get()==22)
+                    arrayList.remove();
             }
-        } catch (Exception e) {
         }
 
         System.out.println("현재 데이터의 수 : " + arrayList.count());
 
-        try {
-            data = arrayList.first();
-            System.out.println(data);
-            boolean flag = true;
-            while (flag) {
-                try {
-                    data = arrayList.next();
-                    System.out.println(data);
-                } catch (Exception e) {
-                    flag=false;
-                }
+        if(arrayList.first()) {
+            System.out.println(arrayList.get());
+            while (arrayList.next()) {
+                System.out.println(arrayList.get());
             }
-        } catch (Exception e) {
         }
     }
 

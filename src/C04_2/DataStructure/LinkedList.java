@@ -36,6 +36,16 @@ public class LinkedList extends AbstractLinkedList {
     }
 
     private boolean sortInsert(int data){
+        Node newNode = new Node();
+        newNode.data = data;
+        Node pred = head;
+
+        while (pred.next!=null && !compare(data, pred.next.data)) {
+            pred = pred.next;
+        }
+        newNode.next=pred.next;
+        pred.next=newNode;
+        numOfData++;
         return true;
     }
 
@@ -77,6 +87,21 @@ public class LinkedList extends AbstractLinkedList {
 
     @Override
     public void setSortRule(SortRuleType sortRuleType) {
-
+        this.sortRuleType=sortRuleType;
     }
+
+    public boolean compare(int d1, int d2) {
+        switch (sortRuleType) {
+            case ASC:
+                if(d1<=d2)
+                    return true;
+                return false;
+            case DESC:
+                if(d1>=d2)
+                    return true;
+                return false;
+        }
+        return false;
+    }
+
 }

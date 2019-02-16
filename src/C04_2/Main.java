@@ -1,12 +1,15 @@
 package C04_2;
 
 import C04_2.DataStructure.LinkedList;
+import C04_2.Util.SortRuleType;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
         LinkedList linkedList = new LinkedList();
         linkedList.init();
+
+        linkedList.setSortRule(SortRuleType.ASC);
 
         linkedList.insert(11);
         linkedList.insert(11);

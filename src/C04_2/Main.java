@@ -14,6 +14,8 @@ public class Main {
         linkedList.insert(22);
         linkedList.insert(33);
 
+        System.out.println("현재 데이터의 수 : " + linkedList.count());
+
         int data;
         try {
             data = linkedList.first();

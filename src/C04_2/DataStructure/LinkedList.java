@@ -71,7 +71,7 @@ public class LinkedList extends AbstractLinkedList {
 
     @Override
     public int count() {
-        return 0;
+        return numOfData;
     }
 
     @Override

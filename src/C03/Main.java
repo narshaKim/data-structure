@@ -1,6 +1,6 @@
-package C03_2;
+package C03;
 
-import C03_2.DataStructure.ArrayList;
+import C03.DataStructure.ArrayList;
 
 public class Main {
 

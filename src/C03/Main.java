@@ -1,12 +1,12 @@
 package C03;
 
-import C03.DataStructure.AbstractArrayList;
 import C03.DataStructure.ArrayList;
+import C03.DataStructure.ArrayListImpl;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        AbstractArrayList arrayList = new ArrayList();
+        ArrayList arrayList = new ArrayListImpl();
         arrayList.init();
         arrayList.insert(11);
         arrayList.insert(11);

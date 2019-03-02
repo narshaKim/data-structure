@@ -1,60 +1,19 @@
 package C03.DataStructure;
 
-public class ArrayList extends AbstractArrayList {
+public abstract class ArrayList {
 
-    @Override
-    public void init() {
-        numOfData=0;
-        curPosition=-1;
-    }
+    public int listLength = 100;
 
-    @Override
-    public boolean insert(int data){
-        if(numOfData>=listLength) {
-            return false;
-        }
-        array[numOfData]=data;
-        numOfData++;
-        return true;
-    }
+    public int[] array = new int[listLength];
+    public int numOfData;
+    public int curPosition;
 
-    @Override
-    public boolean first(){
-        if(numOfData==0)
-            return false;
-        curPosition=0;
-        return true;
-    }
+    public abstract void init();
+    public abstract boolean insert(int data);
+    public abstract boolean first();
+    public abstract boolean next();
+    public abstract int get();
+    public abstract boolean remove();
+    public abstract int count();
 
-    @Override
-    public boolean next(){
-        if(numOfData<=curPosition+1)
-            return false;
-        curPosition++;
-        return true;
-    }
-
-    @Override
-    public int get() {
-        return array[curPosition];
-    }
-
-    @Override
-    public boolean remove(){
-        if(numOfData==0)
-            return false;
-
-        for(int idx=curPosition; idx<numOfData-1; idx++)
-            array[idx]=array[idx+1];
-
-        numOfData--;
-        curPosition--;
-
-        return true;
-    }
-
-    @Override
-    public int count() {
-        return numOfData;
-    }
 }

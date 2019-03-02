@@ -1,12 +1,13 @@
 package C04;
 
+import C04.DataStructure.AbstractLinkedList;
 import C04.DataStructure.LinkedList;
 import C04.Util.SortRuleType;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        LinkedList linkedList = new LinkedList();
+        AbstractLinkedList linkedList = new LinkedList();
         linkedList.init();
 
         linkedList.setSortRule(SortRuleType.ASC);

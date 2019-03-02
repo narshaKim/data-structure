@@ -4,19 +4,19 @@ import C04.Util.SortRuleType;
 
 public abstract class AbstractLinkedList {
 
-    protected Node head;
-    protected Node cur;
-    protected Node before;
-    protected int numOfData;
-    protected SortRuleType sortRuleType;
+    public Node head;
+    public Node cur;
+    public Node before;
+    public int numOfData;
+    public SortRuleType sortRuleType;
 
-    protected abstract void init();
-    protected abstract boolean insert(int data);
-    protected abstract boolean first();
-    protected abstract boolean next();
-    protected abstract boolean remove();
-    protected abstract int get();
-    protected abstract int count();
-    protected abstract void setSortRule(SortRuleType sortRuleType);
+    public abstract void init();
+    public abstract boolean insert(int data);
+    public abstract boolean first();
+    public abstract boolean next();
+    public abstract boolean remove();
+    public abstract int get();
+    public abstract int count();
+    public abstract void setSortRule(SortRuleType sortRuleType);
 
 }

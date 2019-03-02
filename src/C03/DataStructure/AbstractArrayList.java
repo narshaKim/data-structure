@@ -2,18 +2,18 @@ package C03.DataStructure;
 
 public abstract class AbstractArrayList {
 
-    protected int listLength = 100;
+    public int listLength = 100;
 
-    protected int[] array = new int[listLength];
-    protected int numOfData;
-    protected int curPosition;
+    public int[] array = new int[listLength];
+    public int numOfData;
+    public int curPosition;
 
-    protected abstract void init();
-    protected abstract boolean insert(int data);
-    protected abstract boolean first();
-    protected abstract boolean next();
-    protected abstract int get();
-    protected abstract boolean remove();
-    protected abstract int count();
+    public abstract void init();
+    public abstract boolean insert(int data);
+    public abstract boolean first();
+    public abstract boolean next();
+    public abstract int get();
+    public abstract boolean remove();
+    public abstract int count();
 
 }

@@ -1,7 +1,7 @@
-package C05;
+package C05_1;
 
-import C05.DataStructure.AbstractCircularLinkedList;
-import C05.DataStructure.CircularLinkedList;
+import C05_1.DataStructure.AbstractCircularLinkedList;
+import C05_1.DataStructure.CircularLinkedList;
 
 public class Main {
 

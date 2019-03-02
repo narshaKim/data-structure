@@ -1,4 +1,4 @@
-package C05.DataStructure;
+package C05_1.DataStructure;
 
 public class Node {
 

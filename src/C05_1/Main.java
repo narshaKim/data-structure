@@ -1,13 +1,13 @@
 package C05_1;
 
-import C05_1.DataStructure.AbstractCircularLinkedList;
 import C05_1.DataStructure.CircularLinkedList;
+import C05_1.DataStructure.CircularLinkedListImpl;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        AbstractCircularLinkedList circularLinkedList = new CircularLinkedList();
+        CircularLinkedList circularLinkedList = new CircularLinkedListImpl();
         circularLinkedList.init();
 
         System.out.println("데이터 insert");

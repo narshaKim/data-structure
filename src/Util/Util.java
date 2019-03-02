@@ -19,4 +19,8 @@ public class Util {
         return false;
     }
 
+    public static int charToInt(char ch) {
+        return ch-'0';
+    }
+
 }

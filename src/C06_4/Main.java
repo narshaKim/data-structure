@@ -16,6 +16,15 @@ public class Main {
         System.out.println(result2);
         System.out.println(result3);
 
+        PostCalculator postCalculator = new PostCalculator();
+        int calResult1 = postCalculator.evaluateRPNExpress(result1.toCharArray());
+        int calResult2 = postCalculator.evaluateRPNExpress(result2.toCharArray());
+        int calResult3 = postCalculator.evaluateRPNExpress(result3.toCharArray());
+
+        System.out.println(calResult1);
+        System.out.println(calResult2);
+        System.out.println(calResult3);
+
     }
 
 }

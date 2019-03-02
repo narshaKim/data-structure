@@ -1,4 +1,4 @@
-package C04_2.Util;
+package C04.Util;
 
 public enum SortRuleType {
 

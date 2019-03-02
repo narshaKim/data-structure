@@ -1,4 +1,4 @@
-package C04_2.DataStructure;
+package C04.DataStructure;
 
 public class Node {
 

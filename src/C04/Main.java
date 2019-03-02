@@ -1,7 +1,7 @@
-package C04_2;
+package C04;
 
-import C04_2.DataStructure.LinkedList;
-import C04_2.Util.SortRuleType;
+import C04.DataStructure.LinkedList;
+import C04.Util.SortRuleType;
 
 public class Main {
 

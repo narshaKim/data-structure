@@ -1,6 +1,6 @@
-package C04_2.DataStructure;
+package C04.DataStructure;
 
-import C04_2.Util.SortRuleType;
+import C04.Util.SortRuleType;
 
 public class LinkedList extends AbstractLinkedList {
 

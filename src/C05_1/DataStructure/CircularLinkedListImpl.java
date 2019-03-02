@@ -58,7 +58,7 @@ public class CircularLinkedListImpl implements CircularLinkedList {
 
     @Override
     public boolean next() {
-        if(tail==null && cur==null)
+        if(tail==null || cur==null)
             return false;
         before=cur;
         cur=cur.next;

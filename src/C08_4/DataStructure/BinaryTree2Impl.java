@@ -53,9 +53,13 @@ public class BinaryTree2Impl implements BinaryTree2 {
     public void inorderTraverse(BinaryTreeNode bt) {
         if(bt==null)
             return;
+        if(bt.left!=null)
+        System.out.print("(");
         inorderTraverse(bt.left);
         System.out.print(bt.data + " ");
         inorderTraverse(bt.right);
+        if(bt.left!=null)
+        System.out.print(")");
     }
 
     @Override

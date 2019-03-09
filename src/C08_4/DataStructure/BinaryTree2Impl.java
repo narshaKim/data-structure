@@ -54,12 +54,12 @@ public class BinaryTree2Impl implements BinaryTree2 {
         if(bt==null)
             return;
         if(bt.left!=null)
-        System.out.print("(");
+            System.out.print("(");
         inorderTraverse(bt.left);
         System.out.print(bt.data + " ");
         inorderTraverse(bt.right);
         if(bt.left!=null)
-        System.out.print(")");
+            System.out.print(")");
     }
 
     @Override

@@ -5,7 +5,7 @@ import C07_2.DataStructure.CircularQueueImpl;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
 
         CircularQueue queue = new CircularQueueImpl();
         queue.init();

@@ -5,8 +5,8 @@ public interface CircularQueue {
     public void init();
     public boolean isEmpty();
     public int nextPosIdx(int pos);
-    public void enqueue(int data);
-    public int dequeue();
-    public int peek();
+    public void enqueue(int data) throws Exception;
+    public int dequeue() throws Exception;
+    public int peek() throws Exception;
 
 }

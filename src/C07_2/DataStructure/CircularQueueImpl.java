@@ -29,30 +29,27 @@ public class CircularQueueImpl implements CircularQueue {
     }
 
     @Override
-    public void enqueue(int data) {
+    public void enqueue(int data) throws Exception {
         if(nextPosIdx(rear)==front) {
-            System.out.println("Queue Memory Error!");
-            return;
+            throw new Exception("Queue Memory Error!");
         }
         rear=nextPosIdx(rear);
         queArr[rear]=data;
     }
 
     @Override
-    public int dequeue() {
+    public int dequeue() throws Exception {
         if(isEmpty()) {
-            System.out.println("Queue Memory Error!");
-            return -1;
+            throw new Exception("Queue Memory Error!");
         }
         front=nextPosIdx(front);
         return queArr[front];
     }
 
     @Override
-    public int peek() {
+    public int peek() throws Exception {
         if(isEmpty()) {
-            System.out.println("Queue Memory Error!");
-            return -1;
+            throw new Exception("Queue Memory Error!");
         }
         return queArr[nextPosIdx(front)];
     }

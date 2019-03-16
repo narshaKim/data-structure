@@ -1,6 +1,6 @@
 package C10_1;
 
-public class BubbleSort {
+public class BasicSort {
 
     public static void bubbleSort(int[] arr) {
         for(int i=0; i<arr.length-1; i++) {

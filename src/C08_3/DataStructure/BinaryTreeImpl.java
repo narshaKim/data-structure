@@ -1,6 +1,6 @@
 package C08_3.DataStructure;
 
-public class BinaryTree2Impl implements BinaryTree2 {
+public class BinaryTreeImpl implements BinaryTree {
 
     @Override
     public BinaryTreeNode makeBinaryTreeNode() {

@@ -1,6 +1,6 @@
 package C08_3.DataStructure;
 
-public interface BinaryTree2 {
+public interface BinaryTree {
 
     BinaryTreeNode makeBinaryTreeNode();
     int getData(BinaryTreeNode bt);

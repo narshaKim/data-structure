@@ -1,14 +1,14 @@
 package C08_3;
 
-import C08_3.DataStructure.BinaryTree2;
-import C08_3.DataStructure.BinaryTree2Impl;
+import C08_3.DataStructure.BinaryTree;
+import C08_3.DataStructure.BinaryTreeImpl;
 import C08_3.DataStructure.BinaryTreeNode;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        BinaryTree2 binaryTree = new BinaryTree2Impl();
+        BinaryTree binaryTree = new BinaryTreeImpl();
 
         BinaryTreeNode bt1 = binaryTree.makeBinaryTreeNode();
         BinaryTreeNode bt2 = binaryTree.makeBinaryTreeNode();

@@ -9,6 +9,8 @@ public interface BinaryTree {
     BinaryTreeNode getRightSubTree(BinaryTreeNode bt);
     BinaryTreeNode makeLeftSubTree(BinaryTreeNode main, BinaryTreeNode sub);
     BinaryTreeNode makeRightSubTree(BinaryTreeNode main, BinaryTreeNode sub);
+    void removeLeftSubTree(BinaryTreeNode node);
+    void removeRightSubTree(BinaryTreeNode node);
     void preorderTraverse(BinaryTreeNode bt);
     void inorderTraverse(BinaryTreeNode bt);
     void postorderTraverse(BinaryTreeNode bt);

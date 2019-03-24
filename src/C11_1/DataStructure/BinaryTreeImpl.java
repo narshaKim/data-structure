@@ -41,6 +41,16 @@ public class BinaryTreeImpl implements BinaryTree {
     }
 
     @Override
+    public void removeLeftSubTree(BinaryTreeNode node) {
+        node.left=null;
+    }
+
+    @Override
+    public void removeRightSubTree(BinaryTreeNode node) {
+        node.right=null;
+    }
+
+    @Override
     public void preorderTraverse(BinaryTreeNode bt) {
         if(bt==null)
             return;

@@ -43,6 +43,72 @@ public class BinarySearchTreeImpl extends BinaryTreeImpl implements BinarySearch
     }
 
     @Override
+    public BinaryTreeNode remove(BinaryTreeNode pRoot, int data) {
+        BinaryTreeNode pVRoot = makeAndInit();
+        BinaryTreeNode pNode = pVRoot;
+        BinaryTreeNode dNode = pRoot;
+
+        makeRightSubTree(pVRoot, pRoot);
+
+        while (dNode!=null && getData(dNode)>0) {
+            int cd = getData(dNode);
+            if(data==cd)
+                break;
+            pNode=dNode;
+
+            if(data<cd)
+                dNode=getLeftSubTree(dNode);
+            else
+                dNode=getRightSubTree(dNode);
+        }
+
+        if(dNode==null)
+            return pRoot;
+
+        // 말단
+        if(getLeftSubTree(dNode)==null && getRightSubTree(dNode)==null) {
+            if(getLeftSubTree(pNode)==dNode)
+                removeLeftSubTree(pNode);
+            else
+                removeRightSubTree(pNode);
+        }
+        // 둘 중 하나만 자식이 있음
+        else if(getLeftSubTree(dNode)==null || getRightSubTree(dNode)==null) {
+            BinaryTreeNode dcNode;
+            if(getLeftSubTree(dNode)!=null)
+                dcNode=getLeftSubTree(dNode);
+            else
+                dcNode=getRightSubTree(dNode);
+
+            if(getLeftSubTree(pNode)==dNode)
+                makeLeftSubTree(pNode, dcNode);
+            else
+                makeRightSubTree(pNode, dcNode);
+        }
+        // 둘 다 자식이 있음
+        else {
+            BinaryTreeNode mNode = getRightSubTree(dNode);
+            BinaryTreeNode mpNode = dNode;
+
+            while (getLeftSubTree(mNode)!=null) {
+                mpNode=mNode;
+                mNode=getLeftSubTree(mNode);
+            }
+
+            setData(dNode, getData(mNode));
+
+            if(getLeftSubTree(mpNode)==mNode)
+                makeLeftSubTree(mpNode, getRightSubTree(mNode));
+            else
+                makeRightSubTree(mpNode, getRightSubTree(mNode));
+        }
+
+        pRoot=getRightSubTree(pVRoot);
+
+        return pRoot;
+    }
+
+    @Override
     public BinaryTreeNode search(BinaryTreeNode bst, int target) {
         BinaryTreeNode cNode = bst;
         while (cNode!=null && getData(cNode)>0) {

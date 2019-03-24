@@ -24,7 +24,7 @@ public class RecursiveBinarySearch {
             arr[i]=(int) Math.floor(Math.random()*range);
         }
         Arrays.sort(arr);
-        int idx = recursiveBinarySearch(3, arr, 0, arrayLength);
+        int idx = recursiveBinarySearch(3, arr, 0, arrayLength-1);
         System.out.println(idx);
     }
 

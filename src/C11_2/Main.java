@@ -1,8 +1,8 @@
-package C11_1;
+package C11_2;
 
-import C11_1.DataStructure.BinarySearchTree;
-import C11_1.DataStructure.BinarySearchTreeImpl;
-import C11_1.DataStructure.BinaryTreeNode;
+import C11_2.DataStructure.BinarySearchTree;
+import C11_2.DataStructure.BinarySearchTreeImpl;
+import C11_2.DataStructure.BinaryTreeNode;
 
 public class Main {
     public static void main(String[] args) {

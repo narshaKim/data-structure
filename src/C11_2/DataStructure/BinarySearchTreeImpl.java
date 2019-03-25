@@ -1,4 +1,4 @@
-package C11_1.DataStructure;
+package C11_2.DataStructure;
 
 public class BinarySearchTreeImpl extends BinaryTreeImpl implements BinarySearchTree {
 

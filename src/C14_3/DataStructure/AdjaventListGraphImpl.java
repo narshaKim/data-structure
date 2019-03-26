@@ -54,49 +54,43 @@ public class AdjaventListGraphImpl implements AdjaventListGraph {
     @Override
     public void showGraphEdgeInfoDFS(int startV) throws Exception {
         ListBaseStack stack = new ListBaseStackImpl();
+        int visitV = startV;
+
         stack.init();
+        visitVertex(visitV);
+        stack.push(visitV);
 
-        visitInfo = new int[numV];
+        while (lists[visitV].first()) {
+            int nextV = lists[visitV].get();
+            boolean visitFlag = false;
 
-        int idx = startV;
-
-        if(visitVertex(idx))
-            stack.push(idx);
-
-        while (true) {
-
-            if(lists[idx].first()) {
-
-                boolean find = false;
-
-                int item = lists[idx].get();
-                if(visitVertex(item)) {
-                    stack.push(item);
-                    idx=item;
-                    continue;
-                }
-
-                while (lists[idx].next()) {
-                    item = lists[idx].get();
-                    if(visitVertex(item)) {
-                        stack.push(item);
-                        idx=item;
-                        find=true;
+            if(visitVertex(nextV)) {
+                stack.push(visitV);
+                visitV=nextV;
+                visitFlag=true;
+            }
+            else {
+                while (lists[visitV].next()) {
+                    nextV = lists[visitV].get();
+                    if(visitVertex(nextV)) {
+                        stack.push(visitV);
+                        visitV=nextV;
+                        visitFlag=true;
                         break;
                     }
                 }
-
-                if(find==true)
-                    continue;
-
-                if(stack.isEmpty())
-                    break;
-                stack.pop();
-                if(stack.isEmpty())
-                    break;
-                idx=(int)stack.peek();
             }
+
+            if(visitFlag==true)
+                continue;
+
+            if(stack.isEmpty())
+                break;
+            visitV=(int)stack.pop();
         }
+
+        visitInfo = new int[numV];
+
     }
 
     private boolean visitVertex(int visitV) {

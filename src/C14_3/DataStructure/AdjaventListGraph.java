@@ -6,5 +6,6 @@ public interface AdjaventListGraph {
     void addEdge(int fromV, int endV);
     void showGraphEdgeInfo();
     void showGraphEdgeInfoDFS(int startV) throws Exception;
+    void showGraphEdgeInfoBFS(int startV) throws Exception;
 
 }

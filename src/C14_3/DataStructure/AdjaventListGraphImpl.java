@@ -5,10 +5,12 @@ import C04.DataStructure.LinkedListImpl;
 import C04.Util.SortRuleType;
 import C06_4.DataStructure.ListBaseStack;
 import C06_4.DataStructure.ListBaseStackImpl;
+import C07_3.DataStructure.ListBaseQueue;
+import C07_3.DataStructure.ListBaseQueueImpl;
 
 public class AdjaventListGraphImpl implements AdjaventListGraph {
 
-    final char[] edge = {'A','B','C','D','E','F','G','H','I','J'};
+    public final char[] edge = {'A','B','C','D','E','F','G','H','I','J'};
     LinkedList[] lists;
     int numV; // 정점의 수
     int numE; // 간선의 수
@@ -101,4 +103,30 @@ public class AdjaventListGraphImpl implements AdjaventListGraph {
         return true;
     }
 
+    @Override
+    public void showGraphEdgeInfoBFS(int startV) throws Exception {
+        ListBaseQueue queue = new ListBaseQueueImpl();
+        queue.init();
+
+        int visitV = startV;
+        visitVertex(visitV);
+
+        while (lists[visitV].first()) {
+            int nextV = lists[visitV].get();
+            if(visitVertex(nextV)) {
+                queue.enqueue(nextV);
+            }
+            while (lists[visitV].next()) {
+                nextV = lists[visitV].get();
+                if(visitVertex(nextV)) {
+                    queue.enqueue(nextV);
+                }
+            }
+            if(queue.isEmpty())
+                break;
+            visitV=queue.dequeue();
+        }
+
+        visitInfo = new int[numV];
+    }
 }

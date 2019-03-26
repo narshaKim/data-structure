@@ -19,16 +19,36 @@ public class Main {
 
         graph.showGraphEdgeInfo();
 
+        System.out.println("깊이 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[0]);
         graph.showGraphEdgeInfoDFS(0);
         System.out.println();
 
+        System.out.println("깊이 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[2]);
         graph.showGraphEdgeInfoDFS(2);
         System.out.println();
 
+        System.out.println("깊이 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[4]);
         graph.showGraphEdgeInfoDFS(4);
         System.out.println();
 
+        System.out.println("깊이 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[6]);
         graph.showGraphEdgeInfoDFS(6);
+        System.out.println();
+
+        System.out.println("너비 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[0]);
+        graph.showGraphEdgeInfoBFS(0);
+        System.out.println();
+
+        System.out.println("너비 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[2]);
+        graph.showGraphEdgeInfoBFS(2);
+        System.out.println();
+
+        System.out.println("너비 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[4]);
+        graph.showGraphEdgeInfoBFS(4);
+        System.out.println();
+
+        System.out.println("너비 우선 탐색 : "  + ((AdjaventListGraphImpl) graph).edge[6]);
+        graph.showGraphEdgeInfoBFS(6);
         System.out.println();
 
     }

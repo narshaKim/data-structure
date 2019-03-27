@@ -1,7 +1,6 @@
 package C13_2.ListDataStructure;
 
 import C04.Util.SortRuleType;
-import C13_2.DataStructure.Person;
 import C13_2.DataStructure.Slot;
 
 public abstract class LinkedList {

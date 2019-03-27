@@ -11,10 +11,10 @@ import C07_3.DataStructure.ListBaseQueueImpl;
 public class AdjaventListGraphImpl implements AdjaventListGraph {
 
     public final char[] edge = {'A','B','C','D','E','F','G','H','I','J'};
-    LinkedList[] lists;
-    int numV; // 정점의 수
-    int numE; // 간선의 수
-    int[] visitInfo;
+    public LinkedList[] lists;
+    public int numV; // 정점의 수
+    public int numE; // 간선의 수
+    public int[] visitInfo;
 
     @Override
     public void init(int numV) {
@@ -95,7 +95,7 @@ public class AdjaventListGraphImpl implements AdjaventListGraph {
 
     }
 
-    private boolean visitVertex(int visitV) {
+    protected boolean visitVertex(int visitV) {
         if(visitInfo[visitV]>0)
             return false;
         visitInfo[visitV]=1;
